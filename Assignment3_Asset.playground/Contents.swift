@@ -32,7 +32,7 @@ print("Difference (heroes - villains):", heroes.subtracting(villains))
 
 print("Contains Batman:", heroes.contains("Batman"))
 
-heroes.insert("Spider-Man")
+heroes.insert("Spider Man")
 heroes.remove("Thor")
 
 print("Updated heroes:", heroes)
@@ -102,18 +102,18 @@ var heroPower: [String: Int] = [
     "Hulk": 950
 ]
 
-heroesList.append("Spider-Man")
-heroPower["Spider-Man"] = 750
+heroesList.append("Spider Man")
+heroPower["Spider Man"] = 750
 
 if let strongest = heroPower.max(by: { $0.value < $1.value }) {
     print("Strongest hero:", strongest.key, "with power", strongest.value)
 }
 
-let activeHeroes: Set<String> = ["Iron Man", "Spider-Man", "Hulk", "Doctor Strange"]
+let activeHeroes: Set<String> = ["Iron Man", "Spider Man", "Hulk", "Doctor Strange"]
 let participating = activeHeroes.intersection(Set(heroesList))
 
 for hero in participating.sorted() {
     let power = heroPower[hero] ?? 0
-    let status = power >= 800 ? "READY" : "NEEDS TRAINING"
+    let status = power >= 800 ? "ready" : "needs trainign"
     print("\(hero) - \(status) (power: \(power))")
 }
